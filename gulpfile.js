@@ -4,6 +4,7 @@ const {
   task,
   series,
   watch,
+  parallel
 } =require('gulp');
 var rm = require('gulp-rm');
 var sass = require('gulp-sass');
@@ -16,9 +17,8 @@ var gcmq = require('gulp-group-css-media-queries');
 let cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
-var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
-var pump = require('pump');
+let uglify = require('gulp-uglify-es').default;
 
 sass.compiler = require('node-sass');
 
@@ -50,7 +50,8 @@ task('css', function () {
     .pipe(gcmq())
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(dest('dist/sass/'));
+    .pipe(dest('dist/sass/'))
+    .pipe(reload({stream:true}))
 });
 
 var lib = [
@@ -75,8 +76,9 @@ task('script', function(){
   // //   presets:['@babel/env']
   // // })
   // // )
-  // .pipe(uglify())
-  .pipe(dest('dist/js/'));
+  .pipe(uglify())
+  .pipe(dest('dist/js/'))
+  .pipe(reload({stream:true}))
 })
 
 var img = [
@@ -113,4 +115,4 @@ task('server', function() {
 watch("css/**/*.scss", series('css'))
 watch("index.html", series('copy:html'))
 watch("js/*.js", series('script'))
-task('default',series('clean','copy:html','normal','css','library','script','images','fonts','server'))
+task('default',series('clean',parallel('copy:html','normal','css','library','script','images','fonts'),'server'))
