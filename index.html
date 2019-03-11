@@ -48,16 +48,17 @@
                 </ul>
               </nav>
               <a href="#" class="btn" data-skroll=7>заказать</a>
-
               <a href="#" class="nav__little">
                 <div class="nav__little-bars"></div>
               </a>
-
             </div>
           </header>
           <div class="hero__main">
             <div class="hero__burger">
               <img src="/images/we_do/burger.png" alt="Burger" class="hero__img">
+              <svg class="hero__svg">
+                <use xlink:href="/images/sprite_main.svg#drops"></use>
+              </svg>
             </div>
             <div class="hero__text">
               <h2 class="title hero__title">
@@ -124,7 +125,6 @@
         </div>
       </section>
       <section class="section burgers">
-
         <div class="burgers__main">
           <div class="burgers__btn burgers__left">
             <div class="arrow">
@@ -629,7 +629,6 @@
             </div>
           </div>
         </div>
-
       </section>
       <section class="section team">
         <div class="team__main">
@@ -640,7 +639,7 @@
                 <a href="#" class="name accordeon__name">Дэниэл Редклиф</a>
                 <div class="accordeon__who">
                   <div class="accordeon__who-padd">
-                      <img src="/images/team/man.png" alt="accordeon member" class="accordeon__face">
+                    <img src="/images/team/man.png" alt="accordeon member" class="accordeon__face">
                     <div class="accordeon__text">
                       <div class="accordeon__title-prof">Оператор</div>
                       <p class="accordeon__desc">С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
@@ -652,7 +651,7 @@
                 <a href="#" class="name accordeon__name">Ричард Джеймс</a>
                 <div class="accordeon__who">
                   <div class="accordeon__who-padd">
-                      <img src="/images/team/man.png" alt="accordeon member" class="accordeon__face">
+                    <img src="/images/team/man.png" alt="accordeon member" class="accordeon__face">
                     <div class="accordeon__text">
                       <div class="accordeon__title-prof">Оператор</div>
                       <p class="accordeon__desc">С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
@@ -664,7 +663,7 @@
                 <a href="#" class="name accordeon__name">Джейк Финн</a>
                 <div class="accordeon__who">
                   <div class="accordeon__who-padd">
-                      <img src="/images/team/man.png" alt="accordeon member" class="accordeon__face">
+                    <img src="/images/team/man.png" alt="accordeon member" class="accordeon__face">
                     <div class="accordeon__text">
                       <div class="accordeon__title-prof">Оператор</div>
                       <p class="accordeon__desc">С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
@@ -676,7 +675,7 @@
                 <a href="#" class="name accordeon__name">Николай Иванов</a>
                 <div class="accordeon__who">
                   <div class="accordeon__who-padd">
-                      <img src="/images/team/man.png" alt="accordeon member" class="accordeon__face">
+                    <img src="/images/team/man.png" alt="accordeon member" class="accordeon__face">
                     <div class="accordeon__text">
                       <div class="accordeon__title-prof">Оператор</div>
                       <p class="accordeon__desc">С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
@@ -943,7 +942,6 @@
               <video class="video__burger" poster="/images/video/Photo.png">
                 <source src="images/video/burger_video.mp4" type='video/mp4'>
               </video>
-
               <div class="video__controls">
                 <div class="video__start">
                   <svg class="video__svg">
@@ -983,12 +981,14 @@
               <div class="form__left">
                 <div class="form__contact">
                   <label for="" class="form__block form__block_margin">
-                    <div class="form__title">Имя</div>
-                    <input type="text" class="form__input" name='name' required>
+                    <div class="form__title form__title_star">Имя</div>
+                    <input type="text" class="form__input" name='name'>
+                    <div class="form__error"></div>
                   </label>
                   <label for="" class="form__block">
-                    <div class="form__title">Телефон</div>
-                    <input type="tel" class="form__input " name='phone' required>
+                    <div class="form__title form__title_star">Телефон</div>
+                    <input type="tel" class="form__input " name='phone'>
+                    <div class="form__error"></div>
                   </label>
                 </div>
                 <div class="form__contact">
@@ -996,7 +996,6 @@
                     <div class="form__title">Улица</div>
                     <input type="text" class="form__input" name='street'>
                   </label>
-
                 </div>
                 <div class="form__contact">
                   <label for="" class="form__block form__block_margin">
@@ -1020,8 +1019,9 @@
               <div class="form__right">
                 <div class="form__contact">
                   <label for="" class="form__block">
-                    <div class="form__title">Комментарий</div>
-                    <textarea type="textarea" class="form__input" name="comment" required></textarea>
+                    <div class="form__title form__title_star">Комментарий</div>
+                    <textarea type="textarea" class="form__input" name="comment" maxlength="150"></textarea>
+                    <div class="form__error"></div>
                   </label>
                 </div>
                 <div class="form__contact form__contact_buy">
@@ -1051,18 +1051,15 @@
           </div>
           </form>
         </div>
-
       </section>
       <section class="section contacts">
         <div id="map"></div>
         <div class=" footer">
           <div class="container footer__flex">
-
             <div class="footer__left">
               <div class="footer__contact">
                 <address class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</address>
                 <a href="tel:+78123771377" class="footer__tel">+7 (812) 377-13-77</a>
-
               </div>
             </div>
             <div class="footer__right">
@@ -1089,7 +1086,6 @@
                   </a></li>
               </ul>
             </div>
-
           </div>
         </div>
       </section>
@@ -1155,10 +1151,6 @@
   <script src="js/lib/library.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=bcbda5be-152e-4e0e-962c-8eb3b84f36b6&lang=ru_RU" type="text/javascript"></script>
   <script src="js/main.min.js"></script>
-
-
-
-
 </body>
 
 </html>
