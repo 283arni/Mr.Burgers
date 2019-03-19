@@ -13,7 +13,7 @@
 <body class="body">
   <div class="wrapper">
     <div class="maincontainer">
-      <section class="section hero active">
+      <section class="section hero active" id='hero'>
         <div class="container hero__container">
           <header class="header">
             <div class="logo">
@@ -137,7 +137,7 @@
           </div>
           <div class="burgers__window">
             <ul class="burgers__slider">
-              <li class="burgers__slider-item active">
+              <li class="burgers__slider-item">
                 <div class="burgers__view">
                   <div class="burgers__img">
                     <img src="images/burgers/black_burger.png" class="burgers__king" alt="burger black">
@@ -939,20 +939,24 @@
           <div class="video__wrapper">
             <h2 class="title title_black">как мы работаем</h2>
             <div class="video__player">
+              <div class="video__container">
               <video class="video__burger" poster="/images/video/Photo.png">
                 <source src="images/video/burger_video.mp4" type='video/mp4'>
               </video>
+              <div class="video__play-screen">
+                  <svg class="video__svg">
+                    <use xlink:href="/images/sprite_main.svg#play"></use>
+                  </svg>
+                </div>
+            </div>
               <div class="video__controls">
                 <div class="video__start">
                   <svg class="video__svg">
                     <use xlink:href="/images/sprite_main.svg#play"></use>
                   </svg>
                 </div>
-                <div class="video__play-screen">
-                  <svg class="video__svg">
-                    <use xlink:href="/images/sprite_main.svg#play"></use>
-                  </svg>
-                </div>
+                
+                
                 <div class="video__track">
                   <div class="video__line">
                     <div class="video__track-dot"></div>
@@ -1138,6 +1142,17 @@
         </li>
       </ul>
     </nav>
+  </div>
+  <div class="up">
+    <div class="up__container">
+      <div class="arrow">
+        <a href="#" class="arrow__link arrow__up" data-skroll=0>
+          <svg class="arrow__img" viewBox="0 0 28.685 14.479">
+            <use xlink:href="/images/sprite_main.svg#arrow"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
   </div>
   <script type="template" id='modal-popup'>
     <div class="popup__container">

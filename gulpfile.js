@@ -41,6 +41,7 @@ task('normal', function(){
 
 task('css', function () {
   return src('css/main.scss')
+    .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
@@ -50,6 +51,7 @@ task('css', function () {
     .pipe(gcmq())
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.write())
     .pipe(dest('dist/sass/'))
     .pipe(reload({stream:true}))
 });
@@ -70,6 +72,7 @@ task('library', function(){
 
 task('script', function(){
   return src('js/*.js')
+  .pipe(sourcemaps.init())
   .pipe(concat('main.min.js',{newLine: ";"}))
   // // .pipe(
   // //   babel({
@@ -77,6 +80,7 @@ task('script', function(){
   // // })
   // // )
   .pipe(uglify())
+  .pipe(sourcemaps.write())
   .pipe(dest('dist/js/'))
   .pipe(reload({stream:true}))
 })
