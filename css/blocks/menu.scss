@@ -1,0 +1,15 @@
+.menu {
+  position: relative;
+}
+
+.menu .menu__header {
+  position: absolute;
+  top: 13%;
+  left: 8%;
+
+  @include phones {
+    top: 5%;
+    left: 12%;
+  }
+}
+

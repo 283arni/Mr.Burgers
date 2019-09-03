@@ -1,0 +1,22 @@
+//bg
+@each $bg in (bg_menu, meat, diet, vega) {
+  .accordeon__title_#{$bg} {
+    background:linear-gradient( rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),  no-repeat center center/cover  url(/images/menu/#{$bg}.png);
+  }
+
+  @if $bg==bg_menu {
+    .menu {
+      background: no-repeat center center/cover  url(/images/menu/#{$bg}.png);
+    }
+  }
+}
+
+//fonts
+@mixin font ( $size, $font) {
+  font-size: $size;
+  font-family: $font;
+}
+
+@function rem($px) {
+  @return $px / 18px + 0rem;
+}

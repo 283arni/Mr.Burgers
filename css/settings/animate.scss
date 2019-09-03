@@ -1,0 +1,20 @@
+@keyframes circlepulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes jumpArrow {
+  from {
+    transform: scale(1);
+    transform: rotate(10deg)
+  }
+  to {
+    transform: scale(1.2);
+    transform: rotate(-10deg);
+    opacity: 0;
+  }
+}

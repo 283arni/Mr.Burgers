@@ -1,0 +1,59 @@
+
+
+
+.btn {
+  display: flex;
+  padding: 0.55rem 0.83rem 0.55rem 0.83rem;
+  background: $red;
+  border-radius: 0.27rem;
+  border: none;
+  @include font (0.72rem, $ubuntu);
+  font-weight: 500;
+  color:$white;
+  text-transform: uppercase;
+  transition: 0.3s;
+  outline: none;
+
+  &_none {
+    @include phones {
+      display: none;
+    }
+  }
+
+  &_phone {
+    display: none;
+
+    @include phones {
+      display: flex;
+    }
+  }
+
+  &_burger {
+    margin-bottom: 0.2rem;
+  }
+
+  &:hover {
+    background: #c95a3b;
+  }
+
+  &_black {
+    background: $black;
+
+    &:hover {
+      background: #3f4041;
+    }
+  }
+
+  &_domestos {
+    font-weight: 300;
+    text-transform: none;
+    background: none;
+    &:hover {
+      background: none;
+    }
+  }
+
+  &_modal {
+    margin: 0 auto;
+  }
+}

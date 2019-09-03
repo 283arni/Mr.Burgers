@@ -44,10 +44,7 @@ task('css', function () {
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
+    .pipe(autoprefixer())
     .pipe(gcmq())
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
@@ -90,7 +87,8 @@ var img = [
   'images/**/*.jpg',
   'images/**/*.svg',
   'images/*.svg',
-  'images/**/*.mp4'
+  'images/**/*.mp4',
+  'images/favicon.ico'
 ]
 
 task('images', function(){
@@ -119,4 +117,5 @@ task('server', function() {
 watch("css/**/*.scss", series('css'))
 watch("index.html", series('copy:html'))
 watch("js/*.js", series('script'))
+watch("images/*", series('images'))
 task('default',series('clean',parallel('copy:html','normal','css','library','script','images','fonts'),'server'))

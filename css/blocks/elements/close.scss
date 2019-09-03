@@ -1,0 +1,42 @@
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.close__link {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  background: url(/images/we_do/close_nav.png) center center no-repeat;
+}
+
+
+
+.accordeon__list.active .close_none{
+   
+  @include phones {
+  right: 2rem;
+  top: 2rem;
+  opacity: 1;
+  transition: opacity 0.7s;
+  }
+}
+
+.close__popup {
+  position: static;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+  & .close__link {
+  background: url(/images/comments/close.png) center center no-repeat;
+  }
+}
+.popup__message {
+  @include font(0.7rem, $ubuntu);
+}
+
+.close_none {
+  opacity: 0;
+  right: -2000px;
+}

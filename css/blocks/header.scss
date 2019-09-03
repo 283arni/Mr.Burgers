@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.27rem;
+  
+  @include tablets {
+    margin-bottom: 5rem;
+  }
+
+  @include phones {
+    margin-bottom: 0;
+  }
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@include tablets {
+  .header__links nav {
+    display: none;
+  }
+}
+

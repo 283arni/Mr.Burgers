@@ -1,0 +1,20 @@
+.up {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  animation: 2s jumpArrow 1s infinite;
+  z-index: 10;
+  display: none;
+}
+
+.up__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $white;
+  width: 2.5rem;
+  height: 2.5rem;
+  box-shadow: 0 0 40px rgba($white,0.8)
+}
+

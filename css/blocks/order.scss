@@ -1,0 +1,14 @@
+.order {
+  display: flex;
+  align-items: center;
+  background:  no-repeat  center center/cover url(/images/order/bg_order.png);
+}
+
+.order__main .title{
+  text-align: center;
+  margin-bottom: 2.4rem;
+
+  @include phones {
+    margin-bottom: 1.5rem;
+  }
+}

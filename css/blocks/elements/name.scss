@@ -1,0 +1,17 @@
+
+.name {
+  display: block;
+  position: relative;
+  @include font (0.77rem, $gagalin);
+  text-transform: uppercase;
+  color: $white;
+  text-decoration: none;
+  
+  &_margin {
+    margin-bottom: 1.1rem;
+    @include phones {
+    font-size: 1.33rem
+    }
+  }
+}
+

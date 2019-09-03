@@ -1,0 +1,46 @@
+.arrow {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  
+  &_hero {
+    width: 2rem;
+    height: 2rem;
+    transform: rotate(90deg);
+
+    &:hover {
+      transform: scale(1.5) rotate(90deg);
+    }
+  }
+
+  &_up {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+.arrow__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.arrow__img {
+  width: 100%;
+  height: 100%;
+  fill: $white;
+
+  &_prev {
+    transform: rotate(180deg)
+  }
+
+  &_up {
+    fill: $red;
+    transform: rotate(-90deg);
+  }
+}
+
+
+
+
+

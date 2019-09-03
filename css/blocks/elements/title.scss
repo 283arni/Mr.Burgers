@@ -1,0 +1,35 @@
+.title {
+  font: 4rem $gagalin;
+  color: $yellow;
+
+  &_hero{
+    width: 100%;
+    margin-bottom: 1.22rem;
+    
+    @include phones {
+      margin-bottom: 0;
+    }
+  }
+
+  &_we-best {
+    text-align: center;
+    margin-bottom: 1.94rem;
+  
+    @include phones {
+      font-size: 2.7rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+  
+  &_black {
+    color: $black;
+  }
+
+  &_white {
+    color: $white;
+  }
+  
+  @include phones {
+    font-size: 2.7rem;
+  }
+}

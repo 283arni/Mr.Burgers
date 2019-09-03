@@ -1,0 +1,46 @@
+$yellow: #f9b43b;
+$red: #e45028;
+$black: #2f3234;
+$white: #fff;
+$green:#8ac03e;
+
+//breakpoints
+$desktop: 1200px;
+$tablets: 768px;
+$phones: 480px;
+
+// settings
+@import "settings/media.scss";
+@import "settings/layout.scss";
+@import "settings/fonts.scss";
+@import "settings/mix.scss";
+@import "settings/animate.scss";
+
+
+//elements
+@import "blocks/elements/logo.scss";
+@import "blocks/elements/btn.scss";
+@import "blocks/elements/title.scss";
+@import "blocks/elements/arrow.scss";
+@import "blocks/elements/name.scss";
+@import "blocks/elements/close.scss";
+@import "blocks/elements/up.scss";
+
+//block
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/hero.scss";
+@import "blocks/we_best.scss";
+@import "blocks/burgers.scss";
+@import "blocks/slider.scss";
+@import "blocks/comments.scss";
+@import "blocks/video.scss";
+@import "blocks/accordeon.scss";
+@import "blocks/team.scss";
+@import "blocks/menu.scss";
+@import "blocks/order.scss";
+@import "blocks/form.scss";
+@import "blocks/contacts.scss";
+@import "blocks/social.scss";
+@import "blocks/popup.scss";
+

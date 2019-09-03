@@ -1,0 +1,76 @@
+.we-best {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around ;
+  background: no-repeat center center/cover url(/images/we_best/bg_s_section.jpg);
+}
+
+.we-best__info {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+
+  @include phones {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+.we-best__item {
+  flex: 1;
+  margin-right: 2.05rem;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @include phones {
+    display: flex;
+    margin-right: 0;
+    padding: 5% 0;
+    align-items: center;
+  }
+}
+
+.we-best__img {
+  margin-bottom: 1.66rem;
+
+  @include phones {
+    margin-bottom: 0;
+  }
+}
+
+.we-best__pic {
+  width: 5.27rem;
+  height: 4.44rem;
+}
+
+.we-best__desc {
+
+  @include phones {
+    margin-left: 1rem;
+  }
+}
+
+.we-best__header {
+  @include font (1.33rem, $lifehack);
+  font-weight: 500;
+  color: $black;
+  line-height: 1.17;
+  margin-bottom: 0.83rem;
+
+  span {
+    display: block;
+
+    @include phones {
+      display: inline;
+    }
+  }
+}
+
+.we-best__text {
+  @include font(0.77rem, $ubuntu);
+  color: rgba(47, 50, 52, 0.8);
+  line-height: 1.71;
+}

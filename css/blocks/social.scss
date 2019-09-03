@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social__item {
+  margin-right: 0.9rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  content: "";
+  width: 1.27rem;
+  height: 1.1rem;
+  display: block;
+}
+
+.social__svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: #5a5a5a;
+  transition: 0.3s;
+
+  &:hover {
+    fill: $white;
+  }
+}

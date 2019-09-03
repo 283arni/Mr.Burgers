@@ -1,0 +1,252 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 70%;
+
+  @include desktop {
+    width: 90%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.slider__btn {
+  min-width: 50px;
+}
+
+.slider__window {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider__list {
+  display: flex;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.slider__slid {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  min-width: 100%;
+
+  @include tablets {
+    flex-direction: column;
+    padding: 0 1%;
+  }
+}
+
+.slider__view {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  @include tablets {
+    margin-top: rem(20px);
+  }
+}
+
+.slider__img {
+  @include phones {
+    width: 80%;
+  }
+}
+
+.slider__king {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.slider__composition {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgba($red, 0.4);
+  transition: 0.4s ;
+}
+
+.buregers__visib {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+
+  &:hover .slider__composition {
+    background-color: rgba($red, 1);
+  }
+
+  &:hover  .slider__invis{
+    top: 0;
+    left: 5rem;
+    opacity: 0.9;
+  }
+}
+
+.slider__invis {
+  position: absolute;
+  top: -90000px;
+  width: 250px;
+  @include font(0.7rem, $ubuntu);
+  color: $black;
+  background: $white;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.4s opacity;
+
+  @include tablets {
+    width: auto;
+  }
+}
+
+.slider__food {
+  width: 100%;
+}
+
+.slider__item {
+  width: 100%;
+}
+
+.slider__name {
+  text-align: left;
+  font-weight: 500;
+}
+
+.slider__gramm{
+  font-weight: 300;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.slider__svg {
+  width: 45px;
+  height: 48px;
+}
+
+.slider__burger-svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: $white;
+}
+
+.slider__word {
+  @include font (0.7rem, $gagalin);
+  color: $white;
+}
+
+.slider__kk {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @include font(1.1rem, $gagalin);
+  color: rgba($white, 0.5);
+  text-align: center;
+
+  @include tablets {
+    top: 0;
+    left: auto;
+    right: 0;
+    bottom: auto;
+  }
+}
+
+.burger__wrapper {
+  position: relative;
+  width: 3.3rem;
+  height: 3.3rem;
+}
+
+.slider__kk-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.3rem;
+  height: 3.3rem;
+  fill: $white;
+  opacity: 0.5;
+}
+
+.burger__number {
+  padding-top: 50%;
+}
+
+.burger__kilo {
+  font-size: 0.7rem
+}
+
+.slider__info {
+  flex: 1;
+
+  @include tablets {
+  text-align: center;
+  }
+}
+
+.slider__title {
+  line-height: 0.89;
+  margin-bottom: 2.5rem;
+}
+
+.slider__desc {
+  @include font (0.77rem, $ubuntu);
+  color: $white;
+  font-weight: 300;
+  line-height: 1.71;
+  margin-bottom: 1rem;
+
+  @include tablets {
+    padding: 0 5%;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.slider__price {
+  display: flex;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.slider__money  {
+  @include font(1.6rem, $gagalin);
+  color: $red;
+
+  @include phones {
+    font-size: 1.3rem;
+  }
+}
+
+.slider__money span {
+  font-size: 4rem;
+
+  @include phones {
+    font-size: 2.7rem;
+  }
+}
+
+.slider__order {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 1.5rem;
+}
+
