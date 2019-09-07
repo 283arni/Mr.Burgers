@@ -15,28 +15,18 @@
   bottom: 0;
   background:  no-repeat center center/cover url(/images/contacts/bg_footer.png);
 
-  &__right, &__left {
+  &__links, &__conect {
     flex: 1;
   }
 }
 
-.footer__flex {
-  display: flex;
-  align-items: center;
-  min-height: 3.33rem;
 
-  @include phones {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem 0.5rem;
-  }
-
-}
 
 .footer__contact {
   @include font (0.77rem, $ubuntu);
   font-weight: 300;
   color: $white;
+
   @include phones {
     margin-bottom: 1rem;
   }
@@ -47,25 +37,21 @@
 }
 
 .footer__tel {
-  position: relative;
   font-weight: bold;
   color: #e45028;
   text-decoration: none;
-  margin-left: 0.94rem;
 
-  &:after {
-    position: absolute;
+  &::before {
+    margin-right: 0.5rem;
     content: '';
     width: 0.66rem;
     height: 0.66rem;
     display: inline-block;
-    left: -1rem;
     background:  no-repeat center center url(/images/contacts/phone.svg);
   }
 
   &:hover {
-    color:  #c95a3b;
-    border-bottom: 1px  #c95a3b solid;
+    border-bottom: 1px  #e45028 solid;
   }
 }
 

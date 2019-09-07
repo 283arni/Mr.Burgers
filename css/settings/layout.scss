@@ -36,6 +36,18 @@ html, body {
   @include phones {
     max-width: 450px;
   }
+
+  &_footer {
+    display: flex;
+    align-items: center;
+    min-height: 3.33rem;
+  
+    @include phones {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem 0.5rem;
+    }
+  }
 }
 
 .maincontainer {

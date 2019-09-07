@@ -1,16 +1,38 @@
 
 .name {
-  display: block;
-  position: relative;
+
   @include font (0.77rem, $gagalin);
   text-transform: uppercase;
   color: $white;
-  text-decoration: none;
   
   &_margin {
     margin-bottom: 1.1rem;
     @include phones {
     font-size: 1.33rem
+    }
+  }
+
+  &_accordeon {
+    margin-bottom: 2rem;
+  
+    @include tablets {
+      display: inline-block;
+      font-size: 1.22rem;
+    }
+  
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      display: inline-block;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 7px solid $yellow;
+      margin-right: 0.5rem;
+  
+      @include tablets {
+        top: 0.5rem;
+      }
     }
   }
 }

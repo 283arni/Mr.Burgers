@@ -15,7 +15,7 @@
   }
 }
 
-.form__left {
+.form__address {
   flex: 1;
   margin-right: 1.2rem;
 
@@ -37,7 +37,7 @@
 }
 
 
-.form__right {
+.form__info {
   flex: 1;
 
   .form__contact {
@@ -115,7 +115,6 @@ textarea.form__input {
 
 .form__visible {
   position: relative;
-  content: '';
   width: 14px;
   height: 14px;
   display: block;
@@ -154,7 +153,6 @@ textarea.form__input {
 }
 
 .form__check-vis {
-  content: '';
   width: 0.88rem;
   height: 0.83rem;
   display: block;

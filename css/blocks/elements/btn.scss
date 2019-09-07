@@ -14,20 +14,6 @@
   transition: 0.3s;
   outline: none;
 
-  &_none {
-    @include phones {
-      display: none;
-    }
-  }
-
-  &_phone {
-    display: none;
-
-    @include phones {
-      display: flex;
-    }
-  }
-
   &_burger {
     margin-bottom: 0.2rem;
   }

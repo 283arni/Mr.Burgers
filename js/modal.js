@@ -2,8 +2,7 @@
   // modal window
 
   const modal = document.querySelector('#modal-popup').innerHTML;
-  const btnRead = document.querySelectorAll('.btn_phone');
-  const btnRead2 = document.querySelectorAll('.btn_none');
+  const btnRead = document.querySelectorAll('.btn_black');
   const comment = document.querySelector('.comments__story');
 
   for (i = 0; i < btnRead.length; i++) {
@@ -14,17 +13,8 @@
     });
   }
 
-  for (i = 0; i < btnRead2.length; i++) {
-    btnRead2[i].addEventListener('click', (e) => {
-      e.preventDefault();
-      const block = createBlock(comment.innerHTML);
-      document.body.appendChild(block);
-    });
-  }
-
   function createBlock(text) {
     const div = document.createElement('div');
-    
     div.classList.add('popup');
     div.innerHTML = modal;
 
@@ -92,7 +82,7 @@
     return valid;
   }
 
-  isForm.addEventListener('keydown', () => { validateForm(valid); });
+  isForm.addEventListener('keydown', () => {validateForm(valid);});
 
   isForm.addEventListener('submit', (e) => {
     e.preventDefault();

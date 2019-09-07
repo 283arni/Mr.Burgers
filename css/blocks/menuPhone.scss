@@ -1,0 +1,18 @@
+
+.humburger {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:#2f3234;
+  display: flex;
+  z-index: 50;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.humburger__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
